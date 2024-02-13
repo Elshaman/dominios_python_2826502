@@ -9,21 +9,21 @@
     <entity-names>
       <counter>
         <item-type type-id="class" type="Class" />
-        <value>4</value>
+        <value>5</value>
       </counter>
     </entity-names>
     <entity-ids>
       <counter>
         <item-type type-id="class" type="Class" />
-        <value>5</value>
+        <value>6</value>
       </counter>
       <counter>
         <item-type type-id="property" type="Property" />
-        <value>19</value>
+        <value>23</value>
       </counter>
       <counter>
         <item-type type-id="relationship" type="Association" />
-        <value>4</value>
+        <value>5</value>
       </counter>
       <counter>
         <item-type type-id="comment" type="Comment" />
@@ -80,6 +80,7 @@
       <parameters />
       <types>
         <type id="Class:88042659f0124a6a8f43095535c9fb27" name="Cupo" class-ref="88042659f0124a6a8f43095535c9fb27" />
+        <type id="Class:0f551aa7c63e470e9981b1459919481c" name="Empleado" class-ref="0f551aa7c63e470e9981b1459919481c" />
         <type id="Class:8b8fda71d0604c899c11c45c17264a3d" name="Cliente" class-ref="8b8fda71d0604c899c11c45c17264a3d" />
         <type id="Class:f74e7bebeacf46d390641467e8d9bab3" name="Pago" class-ref="f74e7bebeacf46d390641467e8d9bab3" />
         <type id="Class:0702efd319134727a0c3ada5f676cbe2" name="Vehiculo" class-ref="0702efd319134727a0c3ada5f676cbe2" />
@@ -90,8 +91,14 @@
     <item id="fa8c48c8aea94e979763288202f3c357" cid="PROP008" type="property" owner="62925016da764dae94c8e6bc10e469dc" creator="" creation-date="02/13/2024 13:56:13" visibility="private">
       <structural-feature multiplicity="1..*" type="Vehiculo" type-id="Class:0702efd319134727a0c3ada5f676cbe2" />
     </item>
+    <item id="ccca43b2617b444095d3db5240262faf" cid="PROP021" type="property" name="factura" owner="0d94cbae39ad44a5925e84c8f2dbccfd" creator="" creation-date="02/13/2024 16:38:39" visibility="undefined">
+      <structural-feature type="Empleado" type-id="Class:0f551aa7c63e470e9981b1459919481c" />
+    </item>
     <item id="3037627350f646058aa4a1663311dc4c" cid="PROP018" type="property" name="se registra para" owner="59152250ed284f9f9ff4cc5d38ee9c21" creator="" creation-date="02/13/2024 14:13:11" visibility="private">
       <structural-feature multiplicity="1" type="Pago" type-id="Class:f74e7bebeacf46d390641467e8d9bab3" />
+    </item>
+    <item id="4e5de35af1e14285aa73ea0c6835b0da" cid="PROP022" type="property" name="es hecho por" owner="0d94cbae39ad44a5925e84c8f2dbccfd" creator="" creation-date="02/13/2024 16:38:39" visibility="private">
+      <structural-feature multiplicity="*" type="Pago" type-id="Class:f74e7bebeacf46d390641467e8d9bab3" />
     </item>
     <item id="59ab14accedd43f9aa3ad2a0451d2c14" cid="PROP017" type="property" name="se relaciona a" owner="59152250ed284f9f9ff4cc5d38ee9c21" creator="" creation-date="02/13/2024 14:13:11" visibility="private">
       <structural-feature multiplicity="1" type="Vehiculo" type-id="Class:0702efd319134727a0c3ada5f676cbe2" />
@@ -133,7 +140,7 @@
           </authors>
           <description />
           <creation-date>02/13/2024 13:50:48</creation-date>
-          <change-date>02/13/2024 14:13:11</change-date>
+          <change-date>02/13/2024 16:38:39</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -145,6 +152,7 @@
               <attribute id="a1406772708744b40acf73c9b87319863171" cid="PROP009" name="letra" creation-date="02/13/2024 13:57:18" property-ref="2e525d0b9cb14eb39bd102b865eb22f6" />
             </attributes>
           </item>
+          <item id="9904b9a142f247ff85e6a01343a00f7c" cid="PROP020" type="property" name="codigo" owner="0f551aa7c63e470e9981b1459919481c" creator="" creation-date="02/13/2024 16:38:28" visibility="private" />
           <item id="0ba72c7482fe4d2b94a86ca4820be65b" cid="PROP005" type="property" name="identificacion" owner="8b8fda71d0604c899c11c45c17264a3d" creator="" creation-date="02/13/2024 13:55:40" visibility="private">
             <structural-feature type="Vehiculo" type-id="Class:0702efd319134727a0c3ada5f676cbe2" />
           </item>
@@ -187,6 +195,7 @@
 
 Permite definir el papel que juega una entidad en una relaciòn de asociaciòn</comment>
           </item>
+          <item id="d8fdced373f3417a8d3a08fb59b026e2" cid="PROP019" type="property" name="nombre" owner="0f551aa7c63e470e9981b1459919481c" creator="" creation-date="02/13/2024 16:38:24" visibility="private" />
           <item id="b8a9666aa40a45dca822255b49d04852" cid="PROP011" type="property" name="hora_inicio" owner="f74e7bebeacf46d390641467e8d9bab3" creator="" creation-date="02/13/2024 13:58:42" visibility="private">
             <structural-feature type="Cupo" type-id="Class:88042659f0124a6a8f43095535c9fb27" />
           </item>
@@ -211,9 +220,23 @@ Permite definir el papel que juega una entidad en una relaciòn de asociaciòn</
             </operations>
           </item>
           <item id="8de9465213e947d68d493149941517fc" cid="PROP002" type="property" name="tipo_vehiculo" owner="0702efd319134727a0c3ada5f676cbe2" creator="" creation-date="02/13/2024 13:55:04" visibility="private" />
+          <item id="0d94cbae39ad44a5925e84c8f2dbccfd" cid="REL004" type="relationship" creator="" creation-date="02/13/2024 16:38:39" from="0f551aa7c63e470e9981b1459919481c" to="f74e7bebeacf46d390641467e8d9bab3" visibility="package">
+            <owned-items />
+            <relation from="0f551aa7c63e470e9981b1459919481c" to="f74e7bebeacf46d390641467e8d9bab3" derived="false">
+              <start-role id="umlar-6982f304-fa8c-4370-a9f7-6da7a08cb66e" name="" navigability="" association-type="association" visibility="private" property-ref="ccca43b2617b444095d3db5240262faf" />
+              <end-role id="umlar-54a218f9-4f68-4100-8dcc-6f0002ae348d" name="" navigability="" association-type="association" visibility="private" property-ref="4e5de35af1e14285aa73ea0c6835b0da" />
+            </relation>
+          </item>
           <item id="831b7bed74d247bb966998e36edc5d30" cid="PROP010" type="property" name="fecha_inicio" owner="f74e7bebeacf46d390641467e8d9bab3" creator="" creation-date="02/13/2024 13:58:21" visibility="private" />
           <item id="6729ffb95ea645099952044975080269" cid="PROP012" type="property" name="fecha_fin" owner="f74e7bebeacf46d390641467e8d9bab3" creator="" creation-date="02/13/2024 13:59:25" visibility="private" />
           <item id="37aee6c7f7954354b4358ab8caf24d79" cid="PROP006" type="property" name="lista_carros" owner="8b8fda71d0604c899c11c45c17264a3d" creator="" creation-date="02/13/2024 13:55:45" visibility="private" />
+          <item id="0f551aa7c63e470e9981b1459919481c" cid="C005" type="class" name="Empleado" creator="" creation-date="02/13/2024 16:38:04">
+            <owned-items />
+            <attributes>
+              <attribute id="a22a2744c31794e3ca72a578a435412a2863" cid="PROP019" name="nombre" creation-date="02/13/2024 16:38:24" property-ref="d8fdced373f3417a8d3a08fb59b026e2" />
+              <attribute id="acefa7303d1db41af98b5dcc216dc4bfa691" cid="PROP020" name="codigo" creation-date="02/13/2024 16:38:28" property-ref="9904b9a142f247ff85e6a01343a00f7c" />
+            </attributes>
+          </item>
           <item id="c0dea38c4712469fa98aadbca8389600" cid="PROP004" type="property" name="celular" owner="8b8fda71d0604c899c11c45c17264a3d" creator="" creation-date="02/13/2024 13:55:36" visibility="private" />
           <item id="0702efd319134727a0c3ada5f676cbe2" cid="C001" type="class" name="Vehiculo" creator="" creation-date="02/13/2024 13:54:44">
             <owned-items />
@@ -282,6 +305,21 @@ Permite definir el papel que juega una entidad en una relaciòn de asociaciòn</
               </points>
             </layout>
             <relation from="0702efd319134727a0c3ada5f676cbe2" from-iid="227bb90674734425b0e2c8d23793dc15" to="f74e7bebeacf46d390641467e8d9bab3" to-iid="6866940d73ce4091a8f8ee284c9bd992" />
+          </item>
+          <item id="0f551aa7c63e470e9981b1459919481c" iid="8db0d6edd09545c785bc8350a07120a1" show-fields="true" creation-date="02/13/2024 16:38:04" order-index="9" type="entity">
+            <layout ax="539" ay="558" awidth="140" aheight="160" x="539" y="558" width="140" height="160" />
+            <classifier />
+            <class />
+          </item>
+          <item id="0d94cbae39ad44a5925e84c8f2dbccfd" iid="bb22f98e223a422ead9bb476fbecdc00" creation-date="02/13/2024 16:38:39" order-index="10" type="relation">
+            <layout start-role-position="25,15.00003" end-role-position="38.03389,37.13561" start-multiplicity-position="25,-15" end-multiplicity-position="22.25588,-25.13076" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="539" y1="638" x2="280" y2="524" start-border-pos="0.875" end-border-pos="0.446875" start-local-pos="80" end-local-pos="126" name-position="0,20">
+              <points>
+                <point x="539" y="638" />
+                <point x="349" y="639" />
+                <point x="280" y="524" />
+              </points>
+            </layout>
+            <relation from="0f551aa7c63e470e9981b1459919481c" from-iid="8db0d6edd09545c785bc8350a07120a1" to="f74e7bebeacf46d390641467e8d9bab3" to-iid="6866940d73ce4091a8f8ee284c9bd992" />
           </item>
         </layer>
       </diagram>
