@@ -92,7 +92,7 @@
       <structural-feature multiplicity="1..*" type="Vehiculo" type-id="Class:0702efd319134727a0c3ada5f676cbe2" />
     </item>
     <item id="ccca43b2617b444095d3db5240262faf" cid="PROP021" type="property" name="factura" owner="0d94cbae39ad44a5925e84c8f2dbccfd" creator="" creation-date="02/13/2024 16:38:39" visibility="undefined">
-      <structural-feature type="Empleado" type-id="Class:0f551aa7c63e470e9981b1459919481c" />
+      <structural-feature multiplicity="1" type="Empleado" type-id="Class:0f551aa7c63e470e9981b1459919481c" />
     </item>
     <item id="3037627350f646058aa4a1663311dc4c" cid="PROP018" type="property" name="se registra para" owner="59152250ed284f9f9ff4cc5d38ee9c21" creator="" creation-date="02/13/2024 14:13:11" visibility="private">
       <structural-feature multiplicity="1" type="Pago" type-id="Class:f74e7bebeacf46d390641467e8d9bab3" />
